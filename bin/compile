@@ -16,7 +16,7 @@ indent() {
 arrow() {
   sed -u 's/^/-----> /'
 }
-
+echo "Build Dir: $BUILD_DIR and Cache Dir: $CACHE_DIR" | arrow
 echo "Installing graphicsmagick $GRAPHICS_MAGICK_VERSION" | arrow
 # we need this directory, it's our destination
 GM_VENDOR_DIR=$BUILD_DIR/vendor/graphicsmagick
