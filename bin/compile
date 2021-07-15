@@ -21,7 +21,7 @@ echo "Downloading FreeType for graphicsmagick" | arrow
 FT_PACKAGE="https://downloads.sourceforge.net/freetype/freetype-2.10.4.tar.xz"
 FT_SOURCE_DIR=$CACHE_DIR/freetype-2.10.4
 FT_CACHE_DIR=$CACHE_DIR/freetype
-curl $FT_PACKAGE -L -o - | tar xzf - -C $FT_SOURCE_DIR 2>&1 | indent
+curl $FT_PACKAGE -L -o - | tar xf - -C $FT_SOURCE_DIR 2>&1 | indent
 cd $FT_SOURCE_DIR/freetype-2.10.4
 echo "Building FreeType for the first time." | indent
 ./configure --prefix=$FT_CACHE_DIR >/dev/null
