@@ -17,19 +17,18 @@ arrow() {
   sed -u 's/^/-----> /'
 }
 echo "Build Dir: $BUILD_DIR and Cache Dir: $CACHE_DIR" | arrow
-echo "Downloading FreeType for graphicsmagick" | arrow
-FT_PACKAGE="https://downloads.sourceforge.net/freetype/freetype-2.10.4.tar.xz"
-FT_SOURCE_DIR=$CACHE_DIR/freetype-2.10.4
-FT_CACHE_DIR=$CACHE_DIR/freetype
-curl $FT_PACKAGE -L -o - | tar xf - -J $FT_SOURCE_DIR 2>&1 | indent
-cd $FT_SOURCE_DIR/freetype-2.10.4
-echo "Building FreeType for the first time." | indent
-./configure --prefix=$FT_CACHE_DIR >/dev/null
-make install >/dev/null
-echo "Cleaning the download directory" | indent
-rm -rf $FT_SOURCE_DIR
-cd $LP_DIR
-
+#echo "Downloading FreeType for graphicsmagick" | arrow
+#FT_PACKAGE="https://downloads.sourceforge.net/freetype/freetype-2.10.4.tar.xz"
+#FT_SOURCE_DIR=$CACHE_DIR/freetype-2.10.4
+#FT_CACHE_DIR=$CACHE_DIR/freetype
+#curl $FT_PACKAGE -L -o - | tar xf - -J $FT_SOURCE_DIR 2>&1 | indent
+#cd $FT_SOURCE_DIR/freetype-2.10.4
+#echo "Building FreeType for the first time." | indent
+#./configure --prefix=$FT_CACHE_DIR >/dev/null
+#make install >/dev/null
+#echo "Cleaning the download directory" | indent
+#rm -rf $FT_SOURCE_DIR
+#cd $LP_DIR
 
 echo "Installing graphicsmagick $GRAPHICS_MAGICK_VERSION" | arrow
 # we need this directory, it's our destination
