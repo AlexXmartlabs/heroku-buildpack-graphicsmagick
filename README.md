@@ -1,4 +1,4 @@
-heroku-buildpack-graphicsmagick
+heroku-buildpack-graphicsmagick - Required for image processor in shopify system. dependancy within socialprint API 
 ===============================
 
 Use the GraphicsMagick (1.3.30) inside Heroku. Works with [`heroku-18`](https://devcenter.heroku.com/articles/heroku-18-stack).
